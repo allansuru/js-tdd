@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tagged Template</title>
+</head>
+
+<style>
+    .green {
+        color: green;
+        font-size: 20px;
+    }
+</style>
+
+<body></body>
+
+<script>
+    const cityA = 'Brasil';
+    const cityB = 'Jamanica';
+    const cityC = 'USA'
+
+
+    function showing(template, ...values) {
+        return template.reduce((acc, current, i) => {
+            return `
+                ${acc}
+                <span class="green">${values[i - 1]}</span>
+                ${current}
+            `
+        })
+    }
+
+
+    const show = showing`I live in ${cityA} of ${cityC}`;
+
+    document.body.innerHTML = show;
+</script>
+
+</html>
