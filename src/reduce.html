@@ -20,7 +20,7 @@
     const cityC = 'USA'
 
 
-    function showing(template, ...values) {
+    const showing = (template, ...values) => {
         return template.reduce((acc, current, i) => {
             return `
                 ${acc}
