@@ -1,0 +1,19 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allansuru/js-tdd.git"
+  },
+  "author": "Allan Passos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allansuru/js-tdd/issues"
+  },
+  "homepage": "https://github.com/allansuru/js-tdd#readme"
+}
