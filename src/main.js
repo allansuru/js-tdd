@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-undef
+const fetch = require("node-fetch");
 
 const name = 'Allan';
 
@@ -48,3 +50,14 @@ console.log(multiply(2, 1, 2, 3))
 //     })
 //     .then(d => console.log(d))
 //     .catch(err => console.log(err))
+
+let posts = fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(json => json.filter(item => item.userId === 10))
+    .then(d => console.log(d))
+    .catch(err => console.log(err.message))
+
+
+
+
+console.log(posts)
