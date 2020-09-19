@@ -40,7 +40,7 @@ const countries = new Promise((resolve) => {
 const resolveds = Promise.all([currency, countries]);
 
 resolveds.then(itens => {
-    console.log(itens)
+    // console.log(itens)
 })
 
 
@@ -55,11 +55,22 @@ resolveds.then(itens => {
 var txt = 'Brasil' //iterable
 
 
-
 for (let letter of txt) {
     console.log(letter)
     if (letter === 'a') break;
 }
 
 
+function* getNames() {
+    yield _a;
+    yield _b;
+    yield 'C';
+}
 
+const _a = 'A'
+const _b = 'B'
+
+const names = getNames()
+
+console.log(names.next())
+console.log(names.next())
