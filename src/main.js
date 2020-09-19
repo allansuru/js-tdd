@@ -46,11 +46,21 @@ resolveds.then(itens => {
 
 
 
-fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.json())
-    .then(json => json.filter(item => item.userId === 10))
-    .then(d => console.log(d))
-    .catch(err => console.log(err.message))
+// fetch('https://jsonplaceholder.typicode.com/todos')
+//     .then(response => response.json())
+//     .then(json => json.filter(item => item.userId === 10))
+//     .then(d => console.log(d))
+//     .catch(err => console.log(err.message))
+
+
+var txt = 'Brasil' //iterable
+var it = txt[Symbol.iterator]() // iterator
+
+
+for (let letter of txt) {
+    console.log(letter)
+    if (letter === 'a') break;
+}
 
 
 
