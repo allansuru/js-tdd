@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
 
 const name = 'Allan';
 
@@ -54,7 +53,7 @@ resolveds.then(itens => {
 
 
 var txt = 'Brasil' //iterable
-var it = txt[Symbol.iterator]() // iterator
+
 
 
 for (let letter of txt) {
