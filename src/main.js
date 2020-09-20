@@ -74,3 +74,29 @@ const names = getNames()
 
 console.log(names.next())
 console.log(names.next())
+
+
+console.log('1'.padStart(11, '0'))
+console.log('1'.padEnd(11, '0'))
+
+console.log(2 ** 3) // Mat.pow(2,3)
+
+const exist = [1, 2, 3, 4, 5, 99].includes(99);
+console.log(exist);
+
+const animals = {
+    cat: 1,
+    dog: 2,
+    bear: 3,
+    horse: 4
+}
+
+const animalsMap = new Map(Object.entries(animals))
+console.log(animalsMap.size)
+console.log(animalsMap.has('cat'))
+
+for (const a of animalsMap) {
+    console.log(a);
+}
+
+console.log(Object.values(animals).reduce((acc, cur) => acc + cur))
