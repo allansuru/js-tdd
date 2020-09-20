@@ -8,7 +8,6 @@ function ajax(url) {
 }
 
 
-
 function* ajaxGen() {
     console.log('Buscando post 1...')
     const posts = yield ajax('https://jsonplaceholder.typicode.com/todos/1');
@@ -21,8 +20,8 @@ function* ajaxGen() {
 
 
     console.log('Buscando dados do git allansuru');
-    const ap = yield ajax('https://api.github.com/users/allansuru');
-    console.log(ap)
+    const { blog, name } = yield ajax('https://api.github.com/users/allansuru');
+    console.log(blog, name)
 }
 
 const dados = ajaxGen();
