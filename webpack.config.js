@@ -7,7 +7,7 @@ const nodeEnv = process.env.NODE_ENV || 'production'
 
 // eslint-disable-next-line no-undef
 module.exports = {
-  devtool: 'source-map',
+  devtool: false,
   entry: {
     filename: './app.js'
   },

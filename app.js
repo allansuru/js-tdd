@@ -16,8 +16,8 @@ console.log(sum(1, 4))
 
 console.log(sub(2, 1))
 
-console.log(multiplicacao2(2, 2))
+console.log(multiplicacao(20, 100))
 
-console.log(dividir(2, 2))
+console.log(dividir(10, 2))
 
 console.log(PI)
