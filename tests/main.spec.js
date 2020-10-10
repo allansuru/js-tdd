@@ -1,4 +1,7 @@
 /* eslint-disable no-undef */
+// chaijs.com
+
+var expect = require('chai').expect
 
 describe('Main', function () {
     let arr = [];
@@ -29,6 +32,11 @@ describe('Main', function () {
         // })
 
         context("case arrays", function () {
+
+            it('should be an array', function () {
+                expect(arr).to.be.a('array')
+            });
+
             it('should have a size of 4 when push another value to the array', function () {
                 arr.push(4);
                 console.log(arr.length)
