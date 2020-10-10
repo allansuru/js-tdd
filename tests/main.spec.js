@@ -5,22 +5,10 @@ var expect = require('chai').expect
 
 describe('Main', function () {
     let arr = [];
-    // roda uma vez antes do bloco
-    before(function () {
-    })
-
-    // roda uma vez depois do bloco
-    after(function () {
-
-    })
 
     // roda todas as vezes, antes de cada bloco
     beforeEach(function () {
         arr = [1, 2, 3];
-    })
-
-    afterEach(function () {
-
     })
 
 
@@ -49,7 +37,9 @@ describe('Main', function () {
             });
 
             it('should remove the value 3 when use pop in the array', function () {
-                expect(arr.pop()).to.equal(3)
+                // expect(arr.pop()).to.equal(3)
+                arr.pop();
+                expect(arr).to.not.contain(3)
             });
         })
     })
