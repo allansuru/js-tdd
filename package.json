@@ -7,6 +7,7 @@
     "lint": "./node_modules/.bin/eslint src/*.js",
     "ap": "echo 'OI'",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test-cat": "npm test -- --reporter=nyan",
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "npm run build -- --watch",
     "server": "./node_modules/.bin/webpack-dev-server --inline --open"
