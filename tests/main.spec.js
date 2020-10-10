@@ -39,16 +39,17 @@ describe('Main', function () {
 
             it('should have a size of 4 when push another value to the array', function () {
                 arr.push(4);
-                console.log(arr.length)
+                expect(arr).to.have.lengthOf(4)
+
             });
 
             it('should have a size of 2 when pop a value to the array', function () {
                 arr.pop();
-                console.log(arr.length)
+                expect(arr).to.have.lengthOf(2)
             });
 
             it('should remove the value 3 when use pop in the array', function () {
-                console.log(arr.pop() === 3)
+                expect(arr.pop()).to.equal(3)
             });
         })
     })
