@@ -33,6 +33,10 @@ describe('Calc', function () {
             it('should return 4 when `sum(2,2)`', function () {
                 expect(calc.sum(2, 2)).to.equal(4)
             });
+
+            it('should return -4 when `sum(6,-10)`', function () {
+                expect(calc.sum(6, -10)).to.equal(-4)
+            });
         });
 
         describe('Sub', function () {
@@ -45,11 +49,20 @@ describe('Calc', function () {
             it('should return 4 when `sub(2,2)`', function () {
                 expect(calc.mult(2, 2)).to.equal(4)
             });
+
+            it('should return -4 when `sub(6,10)`', function () {
+                expect(calc.sub(6, 10)).to.equal(-4)
+            });
         });
 
         describe('Div', function () {
             it('should return 2 when `div(4,2)`', function () {
                 expect(calc.div(4, 2)).to.equal(2)
+            });
+
+            it('should return `it`s not possible divide by zero` if divide by zero`', function () {
+
+                expect(calc.div(4, 0)).to.equal('it`s not possible divide by zero')
             });
         });
     })

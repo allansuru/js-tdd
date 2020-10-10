@@ -13,6 +13,6 @@ module.exports = {
         return a * b
     },
     div: function (a, b) {
-        return a / b;
+        return (b === 0) ? 'it`s not possible divide by zero' : a / b;
     }
 }
