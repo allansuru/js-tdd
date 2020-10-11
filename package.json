@@ -12,7 +12,20 @@
     "test:coverage": "nyc npm test",
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "npm run build -- --watch",
-    "server": "./node_modules/.bin/webpack-dev-server --inline --open"
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open",
+    "prepush": "npm run lint && npm run test:coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -47,7 +60,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ""
+      "pre-commit": "",
+      "pre-push": "npm run prepush"
     }
   },
   "dependencies": {

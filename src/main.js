@@ -1,4 +1,4 @@
-// const fetch = require("node-fetch");
+// import fetch from "node-fetch";
 
 const name = 'Allan';
 
@@ -39,7 +39,7 @@ const countries = new Promise((resolve) => {
 
 const resolveds = Promise.all([currency, countries]);
 
-resolveds.then(itens => {
+resolveds.then(() => {
     // console.log(itens)
 })
 

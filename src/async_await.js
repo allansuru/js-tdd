@@ -1,4 +1,4 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
 
 // const user = fetch('https://api.github.com/users/allansuru');
@@ -53,5 +53,5 @@ async function getUsers(...users) {
 
 
 
-// getUser('allansuru')
+getUser('allansuru')
 getUsers('allansuru', 'jesus', 'maria')
